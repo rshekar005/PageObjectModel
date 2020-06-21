@@ -1,0 +1,10 @@
+com\crm\qa\pages\DealsPage.class
+com\crm\qa\utils\ContactPageUtils.class
+com\crm\qa\base\TestBase.class
+com\crm\qa\pages\HomePage.class
+com\crm\qa\utils\Excel.class
+com\crm\qa\utils\WebEventListner.class
+com\crm\qa\pages\LoginPage.class
+com\crm\qa\utils\TestUtil.class
+com\qa\ExtentReportListener\ExtentReport.class
+com\crm\qa\pages\ContactPage.class
