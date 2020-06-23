@@ -47,6 +47,7 @@ public class ContactPageTest extends TestBase{
 		loginPage= new LoginPage();
 		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		testutil.switchToFrame("mainpanel");
+		
 	}
 	
 	@Test(priority=1)
@@ -62,8 +63,8 @@ public class ContactPageTest extends TestBase{
 	public void selectContactText()
 	{
 		contactPage=homePage.clickOnContactClick();
-		contactPage.selectContacts("abhilasha Sharma");
-		contactPage.selectContacts("Aashik rajput");
+		contactPage.selectContacts("aa");
+		contactPage.selectContacts("AAA Abc");
 		System.out.println("Clicked on check boxes");
 	}
 	
