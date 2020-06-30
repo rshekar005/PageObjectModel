@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -23,6 +24,8 @@ public class TestBase {
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	
+	public static Logger log=Logger.getLogger(TestBase.class);
+	
 	// WebEventListner it is a class which is defined in qa.utils package for listening webdriver actions. It is implemented with WebDriverEventListener(I)
 	public static WebEventListner eventlistener;
 	public TestBase()
@@ -34,6 +37,8 @@ public class TestBase {
 			
 			try {
 				prop.load(file);
+				log.info("============Property loaded==============");
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -62,13 +67,13 @@ public class TestBase {
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 		}
-		
-		//Creating an onject of EventFiringWebDriver(C) which accepts WebDriver(I) reference.
+		/*
+		 * Event Fring
+		Creating an onject of EventFiringWebDriver(C) which accepts WebDriver(I) reference.
 		e_driver= new EventFiringWebDriver(driver);
 		eventlistener= new WebEventListner();
-		//EventFiringWebDriver(c) register with WebEventListner(C)
 		e_driver.register(eventlistener);
-		driver=e_driver;
+		driver=e_driver;*/
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -77,6 +82,7 @@ public class TestBase {
 		
 		String url= prop.getProperty("url");
 		driver.get(url);
+		log.info("=================Entered URL==================");
 	}
 
 }
