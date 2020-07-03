@@ -33,7 +33,7 @@ public class TestBase {
 		try
 		{
 			prop= new Properties();
-			FileInputStream file = new FileInputStream("E://Git//SeleniumFramework//src//main//java//com//crm//qa//config//config.properties");
+			FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"//src//main//java//com//crm//qa//config//config.properties");
 			
 			try {
 				prop.load(file);
