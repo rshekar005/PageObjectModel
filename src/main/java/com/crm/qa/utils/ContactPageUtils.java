@@ -13,11 +13,11 @@ public class ContactPageUtils {
 	{
 		Excel excel = null;
 		ArrayList<Object[]> myData = new ArrayList<Object[]>();
-		
+
 		//Reading excel file location and sheetname
 		try {
 			 excel = new Excel(System.getProperty("user.dir")+
-					"src//main//java//com//crm//qa//testdata//CRM.xlsx", 
+					"//src//main//java//com//crm//qa//testdata//CRM.xlsx", 
 					 sheetname);
 		} catch (IOException e) {
 			System.out.println("File Not found");
