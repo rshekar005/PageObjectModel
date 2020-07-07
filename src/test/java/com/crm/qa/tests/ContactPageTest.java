@@ -63,8 +63,8 @@ public class ContactPageTest extends TestBase{
 	public void selectContactText()
 	{
 		contactPage=homePage.clickOnContactClick();
-		contactPage.selectContacts("aa");
-		contactPage.selectContacts("AAA Abc");
+		contactPage.selectContacts("abc y");
+		contactPage.selectContacts("Alex Star");
 		System.out.println("Clicked on check boxes");
 	}
 	
