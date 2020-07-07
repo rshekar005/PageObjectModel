@@ -75,7 +75,7 @@ public class ExtentReportListener extends TestUtil implements ITestListener{
 		//test=report.createTest("onstart");
 		System.out.println("Test case started");
 		
-		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/myReport"+".html");
+		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/"+"myReport.html");
 		
 		htmlReport.config().setDocumentTitle("Automation Report");
 		htmlReport.config().setReportName("Atomation Testing Report");
