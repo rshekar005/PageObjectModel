@@ -59,7 +59,7 @@ public class ContactPageTest extends TestBase{
 		System.out.println("Contact Label displayed ? "+b);
 	}
 	
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void selectContactText()
 	{
 		contactPage=homePage.clickOnContactClick();
