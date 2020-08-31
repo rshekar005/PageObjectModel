@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.annotations.BeforeSuite;
 
 import com.crm.qa.utils.TestUtil;
 import com.crm.qa.utils.WebEventListner;
@@ -28,6 +29,8 @@ public class TestBase {
 	
 	// WebEventListner it is a class which is defined in qa.utils package for listening webdriver actions. It is implemented with WebDriverEventListener(I)
 	public static WebEventListner eventlistener;
+	
+
 	public TestBase()
 	{
 		try
