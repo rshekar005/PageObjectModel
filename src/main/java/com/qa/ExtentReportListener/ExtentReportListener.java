@@ -5,7 +5,9 @@ import java.io.IOException;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -23,7 +25,7 @@ public class ExtentReportListener extends TestUtil implements ITestListener{
 	ExtentTest test;
 
 
-	@BeforeTest
+	@BeforeSuite
 	public void onTestStart(ITestResult result) {
 		test=report.createTest(result.getMethod().getMethodName());
 		test.log(Status.INFO, result.getMethod().getMethodName());
@@ -84,7 +86,7 @@ public class ExtentReportListener extends TestUtil implements ITestListener{
 		report.attachReporter(htmlReport);	
 	}
 
-	@AfterTest
+	@AfterSuite
 	public void onFinish(ITestContext context) {
 		System.out.println("Report get's closed");
         report.flush();
